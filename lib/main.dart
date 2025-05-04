@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Sebastian Lech',
+      theme: ThemeData.dark(),
       home: const HomePage(),
     );
   }
