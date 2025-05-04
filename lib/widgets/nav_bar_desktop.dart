@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/colors.dart';
 import 'package:portfolio/constants/nav_items.dart';
+import 'package:portfolio/widgets/logo.dart';
 
 class NavBarDesktop extends StatelessWidget {
   const NavBarDesktop({super.key});
@@ -22,13 +23,7 @@ class NavBarDesktop extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Text(
-            'SL',
-            style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: CustomColor.yellowSecondary),
-          ),
+          Logo(),
           Spacer(),
           for (int i = 0; i < navTitles.length; i++)
             TextButton(
