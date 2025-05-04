@@ -10,6 +10,39 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: ListView(children: [const Text('Home Page')]));
+    return Scaffold(
+      body: ListView(
+        scrollDirection: Axis.vertical,
+        children: [
+          // MAIN
+          Container(
+            height: 500,
+            width: double.infinity,
+          ),
+          // SKILLS
+          Container(
+            color: Colors.blueGrey,
+            height: 500,
+            width: double.infinity,
+          ),
+          // PROJECTS
+          Container(
+            height: 500,
+            width: double.infinity,
+          ),
+          // CONTACT
+          Container(
+            color: Colors.blueGrey,
+            height: 500,
+            width: double.infinity,
+          ),
+          // FOOTER
+          Container(
+            height: 500,
+            width: double.infinity,
+          ),
+        ],
+      ),
+    );
   }
 }
