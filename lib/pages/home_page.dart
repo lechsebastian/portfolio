@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/colors.dart';
+import 'package:portfolio/widgets/logo.dart';
 import 'package:portfolio/widgets/nav_bar_desktop.dart';
+import 'package:portfolio/widgets/nav_bar_mobile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -18,7 +20,10 @@ class _HomePageState extends State<HomePage> {
         scrollDirection: Axis.vertical,
         children: [
           // NAVBAR
-          NavBarDesktop(),
+          // NavBarDesktop(),
+          NavBarMobile(
+            onMenuTap: () {},
+          ),
           // SKILLS
           Container(
             color: Colors.blueGrey,
