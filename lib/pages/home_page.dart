@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/constants/colors.dart';
 import 'package:portfolio/constants/size.dart';
 import 'package:portfolio/widgets/drawer_mobile.dart';
+import 'package:portfolio/widgets/main_desktop.dart';
 import 'package:portfolio/widgets/nav_bar_desktop.dart';
 import 'package:portfolio/widgets/nav_bar_mobile.dart';
 
@@ -35,12 +36,9 @@ class _HomePageState extends State<HomePage> {
                   scaffoldKey.currentState?.openEndDrawer();
                 },
               ),
-            // SKILLS
-            Container(
-              color: Colors.blueGrey,
-              height: 500,
-              width: double.infinity,
-            ),
+            // MAIN
+            MainDesktop(),
+
             // SKILLS
             Container(
               color: Colors.blueGrey,
