@@ -3,6 +3,7 @@ import 'package:portfolio/constants/colors.dart';
 import 'package:portfolio/constants/size.dart';
 import 'package:portfolio/widgets/drawer_mobile.dart';
 import 'package:portfolio/widgets/main_desktop.dart';
+import 'package:portfolio/widgets/main_mobile.dart';
 import 'package:portfolio/widgets/nav_bar_desktop.dart';
 import 'package:portfolio/widgets/nav_bar_mobile.dart';
 
@@ -18,6 +19,9 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final screenSize = MediaQuery.of(context).size;
+    final screenWidth = screenSize.width;
+    final screenHeight = screenSize.height;
     return LayoutBuilder(builder: (context, constraints) {
       return Scaffold(
         key: scaffoldKey,
@@ -37,7 +41,10 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
             // MAIN
-            MainDesktop(),
+            if (constraints.maxWidth >= kMinDesktopWidth)
+              MainDesktop()
+            else
+              MainMobile(),
 
             // SKILLS
             Container(
