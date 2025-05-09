@@ -30,7 +30,7 @@ class MainMobile extends StatelessWidget {
             },
             blendMode: BlendMode.srcATop,
             child: Image.asset(
-              'assets/first_avatar.png',
+              'assets/avatar.png',
               width: screenWidth,
             ),
           ),
